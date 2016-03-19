@@ -31,6 +31,25 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
+//         console.log(allFeeds[1].url);
+         var feedLen = allFeeds.length;
+         var box = [];
+         for(var i =0; i < feedLen; i++) {
+            console.log(allFeeds[i].url);
+            console.log(allFeeds[i].name);
+            
+            it('are not empty', function() {
+//            expect(allFeeds[i].name).toBeDefined();
+//            expect(allFeeds.url).not.toBeDefined();
+            });
+         }
+
+            it('matches objects with the expect key/value pairs', function() {
+                allFeeds.forEach(function(allFeeds) {
+                    expect(allFeeds.url).toBeDefined();
+                })
+            });
+
 
 
         /* TODO: Write a test that loops through each feed
