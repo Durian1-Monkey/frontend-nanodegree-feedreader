@@ -44,7 +44,7 @@ $(function() {
             });
          }
 
-            it('matches objects with the expect key/value pairs', function() {
+            it('URLs are not empty', function() {
                 allFeeds.forEach(function(allFeeds) {
                     expect(allFeeds.url).toBeDefined();
                 })
@@ -56,6 +56,11 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+            it('names are not empty', function() {
+                allFeeds.forEach(function(allFeeds) {
+                    expect(allFeeds.name).toBeDefined();
+                })
+            });
     });
 
 
