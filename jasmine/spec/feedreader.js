@@ -87,9 +87,9 @@ $(function() {
             expect(document.body.classList).not.toBe('menu-hidden');
         });
 //hidden the menu
-        it('is showen', function() {
+        it('is hidden', function() {
             $('#menu-icon-link').trigger('click');
-            expect(document.body.classList).toBe('menu-hidden');
+            expect($('#menu-hidden')).not.toContain();
         });
     });
 
