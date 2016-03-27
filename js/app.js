@@ -8,6 +8,7 @@
 
 // The names and URLs to all of the feeds we'd like available.
 var allFeeds = [
+
     {
         name: 'Udacity Blog',
         url: 'http://blog.udacity.com/feed'
@@ -22,7 +23,6 @@ var allFeeds = [
         url: 'http://feeds.feedburner.com/udacity-linear-digressions'
     }
 ];
-
 /* This function starts up our application. The Google Feed
  * Reader API is loaded asynchonously and will then call this
  * function when the API is loaded.
@@ -123,6 +123,7 @@ $(function() {
         $('body').addClass('menu-hidden');
         loadFeed(item.data('id'));
         return false;
+        console.log('clicked hidden');
     });
 
     /* When the menu icon is clicked on, we need to toggle a class
@@ -130,5 +131,6 @@ $(function() {
      */
     menuIcon.on('click', function() {
         $('body').toggleClass('menu-hidden');
+        console.log('clicked show');
     });
 }());
