@@ -94,7 +94,7 @@ $(function() {
     });
 
     /* TODO: Write a new test suite named "Initial Entries" */
-
+    describe('Initial Entries', function() {
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
@@ -102,6 +102,62 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
 
+//var value;
+
+         beforeEach(function(done) {
+            loadFeed(0, function() {
+            done(); 
+            });
+         });
+/*
+         it('support', function() {
+            var ceck = $('.feed .entry')[0];
+            expect(ceck).toBeGreaterThan('');
+    //        done();
+         });
+*/
+/*
+         var entry;
+
+         beforeEach(function(done) {
+            loadFeed(0, function() {
+                entry = $('.feed .entry')[0];
+                done();
+            });
+         });
+
+         it('support', function() {
+            var ceck = $('.feed .entry')[0];
+            expect(ceck).toBeGreaterThan('');
+    //        done();
+         });
+*/
+
+         it('support', function(done) {
+            loadFeed(0, function() {
+                var entry = $('.feed .entry')[0];
+            expect(entry).toBeGreaterThan('');
+                done();
+            });
+         });
+
+    });
+
+describe('New Feed Selection', function() {
+    beforeEach(function(done) {
+        loadFeed(0, function() {
+            done();
+        });
+    });
+
+    it('is updated', function() {
+        loadFeed(0, function() {
+            var enter = $('.feed')[0];
+            expect(enter).not.toEqual([0]);
+        });
+    });
+
+});
     /* TODO: Write a new test suite named "New Feed Selection"
 
         /* TODO: Write a test that ensures when a new feed is loaded
