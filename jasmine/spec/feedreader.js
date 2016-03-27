@@ -102,36 +102,11 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
 
-//var value;
-
          beforeEach(function(done) {
             loadFeed(0, function() {
             done(); 
             });
          });
-/*
-         it('support', function() {
-            var ceck = $('.feed .entry')[0];
-            expect(ceck).toBeGreaterThan('');
-    //        done();
-         });
-*/
-/*
-         var entry;
-
-         beforeEach(function(done) {
-            loadFeed(0, function() {
-                entry = $('.feed .entry')[0];
-                done();
-            });
-         });
-
-         it('support', function() {
-            var ceck = $('.feed .entry')[0];
-            expect(ceck).toBeGreaterThan('');
-    //        done();
-         });
-*/
 
          it('support', function(done) {
             loadFeed(0, function() {
@@ -142,7 +117,12 @@ $(function() {
          });
 
     });
+    /* TODO: Write a new test suite named "New Feed Selection"
 
+        /* TODO: Write a test that ensures when a new feed is loaded
+         * by the loadFeed function that the content actually changes.
+         * Remember, loadFeed() is asynchronous.
+         */
 describe('New Feed Selection', function() {
     beforeEach(function(done) {
         loadFeed(0, function() {
@@ -150,18 +130,13 @@ describe('New Feed Selection', function() {
         });
     });
 
-    it('is updated', function() {
+    it('is updated', function(done) {
         loadFeed(0, function() {
             var enter = $('.feed')[0];
             expect(enter).not.toEqual([0]);
+            done();
         });
     });
 
 });
-    /* TODO: Write a new test suite named "New Feed Selection"
-
-        /* TODO: Write a test that ensures when a new feed is loaded
-         * by the loadFeed function that the content actually changes.
-         * Remember, loadFeed() is asynchronous.
-         */
 }());
