@@ -87,7 +87,7 @@ $(function() {
             loadFeed(0, done);
         });
 
-        it('support', function(done) {
+        it('are defined', function(done) {
             loadFeed(0, done);
             var entry = $('.feed .entry')[0];
             expect(entry).toBeGreaterThan('');
