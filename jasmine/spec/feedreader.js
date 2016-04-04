@@ -67,7 +67,7 @@ $(function() {
          */
         it('is shown', function() {
             $('.menu-icon-link').trigger('click');
-            expect($('body').hasClass('menu-hidden')).toBeFalsy('menu-hidden');
+            expect($('body').hasClass('menu-hidden')).toBeFalsy();
         });
 
         it('is hidden', function() {
