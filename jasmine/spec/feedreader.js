@@ -33,7 +33,7 @@ $(function() {
 
         it('URLs are defined', function() {
             allFeeds.forEach(function(allFeeds) {
-                expect(allFeeds.url).toBeDefined();
+                expect(allFeeds.url).not.toEqual('');
             });
         });
 
@@ -43,8 +43,7 @@ $(function() {
          */
         it('names are not empty', function() {
             allFeeds.forEach(function(allFeeds) {
-                expect(allFeeds.name).toBeDefined();
-                expect(allFeeds.name).not.toBe(undefined);
+                expect(allFeeds.name).not.toEqual('');
             });
         });
     });
