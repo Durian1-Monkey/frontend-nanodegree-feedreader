@@ -72,7 +72,7 @@ $(function() {
 
         it('is hidden', function() {
             $('.menu-icon-link').trigger('click');
-            expect($('body').hasClass('menu-hidden')).toBeTruthy('menu-hidden');
+            expect($('body').hasClass('menu-hidden')).toBeTruthy();
         });
     });
 
@@ -87,8 +87,7 @@ $(function() {
             loadFeed(0, done);
         });
 
-        it('are defined', function(done) {
-            loadFeed(0, done);
+        it('are defined', function() {
             var entry = $('.feed .entry')[0];
             expect(entry).toBeGreaterThan('');
         });
