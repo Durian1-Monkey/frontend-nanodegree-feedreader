@@ -13,7 +13,7 @@ Whether I work in an organization that uses test-driven development or in an org
 
 ## What will I learn?
 
-I will learn how to use Jasmine to write a number of tests against a pre-existing application. These will test the underlying business logic of the application as well as the event handling and DOM manipulation.
+I learn how to use Jasmine to write a number of tests against a pre-existing application. These will test the underlying business logic of the application as well as the event handling and DOM manipulation.
 
 
 ## How will this help my career?
@@ -21,6 +21,9 @@ I will learn how to use Jasmine to write a number of tests against a pre-existin
 * Writing effective tests requires analyzing multiple aspects of an application including the HTML, CSS and JavaScript - an extremely important skill when changing teams or joining a new company.
 * Good tests give me the ability to quickly analyze whether new code breaks an existing feature within my codebase, without having to manually test all of the functionality.
 
+
+## Style Guide
+[Here](http://udacity.github.io/frontend-nanodegree-styleguide/index.html) is the Udacity style guide that I followed.
 
 # How will I complete this project?
 
