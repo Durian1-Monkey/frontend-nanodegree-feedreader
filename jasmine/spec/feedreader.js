@@ -99,15 +99,18 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          */
     describe('New Feed Selection', function() {
+        var initialFeed;
         beforeEach(function(done) {
-            var initialFeed = $('.feed').html();
+            initialFeed = $('.feed').html();
             loadFeed(0, done);
+            console.log(initialFeed);
         });
 
         it('is updated', function(done) {
-            loadFeed(1, function(initialFeed) {
-                expect(initialFeed).not.toEqual('');
+            loadFeed(1, function() {
+                expect($('.feed').html()).not.toBe(initialFeed);
                 done();
+            console.log(initialFeed);
             });
         });
 
