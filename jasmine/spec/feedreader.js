@@ -88,8 +88,8 @@ $(function() {
         });
 
         it('are defined', function() {
-            var entry = $('.feed .entry')[0];
-            expect(entry).toBeGreaterThan('');
+            var entry = $('.feed .entry');
+            expect(entry.length).toBeGreaterThan(0);
         });
 
     });
