@@ -103,14 +103,12 @@ $(function() {
         beforeEach(function(done) {
             initialFeed = $('.feed').html();
             loadFeed(0, done);
-            console.log(initialFeed);
         });
 
         it('is updated', function(done) {
             loadFeed(1, function() {
                 expect($('.feed').html()).not.toBe(initialFeed);
                 done();
-            console.log(initialFeed);
             });
         });
 
